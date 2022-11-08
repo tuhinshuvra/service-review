@@ -7,6 +7,7 @@ import Blog from "../Blog/Blog";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Service from "../Service/Service";
 import ServiceDetails from "../ServiceDetails/ServiceDetails";
+import TermsAndConditions from "../TermsAndConditions/TermsAndConditions";
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/terms',
+                element: <TermsAndConditions></TermsAndConditions>
             },
             {
                 path: '/login',

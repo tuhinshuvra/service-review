@@ -17,6 +17,7 @@ const Service = ({ service }) => {
                         </Card.Text>
                         <Link className=' text-decoration-none fw-bolder' to={`/services/${_id}`}>Show Details</Link>
                     </Card.Body>
+
                 </Card>
             </Container>
         </div>

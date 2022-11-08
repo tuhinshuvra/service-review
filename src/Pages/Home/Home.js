@@ -1,10 +1,12 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import Service from '../Service/Service';
 import './Home.css';
 
 const Home = () => {
-    const services = useLoaderData();
+    let services = useLoaderData();
+    // services = services.slice(0, 3);
     return (
         <div>
             <h2>This is home Page {services.length} </h2>
@@ -18,6 +20,7 @@ const Home = () => {
                     )
                 }
             </div>
+            <Button>Load More</Button>
         </div>
     );
 };
