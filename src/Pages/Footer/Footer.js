@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import Logo from '../../logo/brain_boost_course_logo.png';
 import './Footer.css';
 
 const Footer = () => {

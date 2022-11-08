@@ -4,9 +4,9 @@ import './TermsAndConditions.css';
 
 const TermsAndConditions = () => {
     return (
-        <div>
-            <h3 className=' text-center fw-bolder mt-3 mb-3'>This is our Terms and condition</h3>
-            <p>Terms and Conditions for Brain Boost Course.
+        <div className=' container'>
+            <h3 className='text-center fw-bolder mt-3 mb-3'>This is Our Terms and Condition</h3>
+            <p>Terms and Conditions for Electronics Doctor Website.
 
                 These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Webiste Name accessible at Website.com.
 
