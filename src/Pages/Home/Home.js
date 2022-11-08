@@ -15,7 +15,6 @@ const Home = () => {
                             key={service._id}
                             service={service}
                         ></Service>
-
                     )
                 }
             </div>
