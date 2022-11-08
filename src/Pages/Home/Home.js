@@ -10,10 +10,10 @@ const Home = () => {
     return (
         <div className=''>
             <h2>This is home Page {services.length} </h2>
-            <div className='d-flex'>
+            <div className='d-flex container'>
                 {
                     services.map(service =>
-                        <div className='services container'>
+                        <div className=''>
                             <Container>
                                 <Card style={{}}>
                                     <Card.Img style={{ height: '350px' }} className='' variant="top" src={service.img} />
