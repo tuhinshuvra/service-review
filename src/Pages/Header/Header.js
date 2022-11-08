@@ -33,17 +33,13 @@ const Header = () => {
                         {/* <Link className=' text-decoration-none text-light fw-bolder me-2 d-none d-lg-block' to="/">Home</Link> */}
                         <Link className=' text-decoration-none text-light fw-bolder me-2' to="/blog" >Blog</Link>
 
-                        <Link className=' text-decoration-none text-light fw-bolder me-2' to="/reviews" >My Reviews</Link>
-                        <Link className=' text-decoration-none text-light fw-bolder me-2' to="/addservice" >Add Service</Link>
-                        <Link className=' text-decoration-none text-light fw-bolder me-2 ' to="/logout">LogOut</Link>
-
-                        <Link className=' text-decoration-none text-light fw-bolder me-2' to="/register" >Register</Link>
-                        <Link className=' text-decoration-none text-light fw-bolder me-2' to="/login">Login</Link>
 
                         <Nav className=' text-light'>
                             {user?.uid ?
                                 <div>
                                     {user?.displayName}
+                                    <Link className=' text-decoration-none text-light fw-bolder me-2' to="/addservice" >Add Service</Link>
+                                    <Link className=' text-decoration-none text-light fw-bolder me-2' to="/reviews" >My Reviews</Link>
                                     <Button onClick={handleLogOut} className=' btn btn-sm btn-danger ms-2'>Logout</Button>
                                     {
                                         user?.photoURL ?

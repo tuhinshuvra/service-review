@@ -8,6 +8,9 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import Service from "../Service/Service";
 import ServiceDetails from "../ServiceDetails/ServiceDetails";
 import TermsAndConditions from "../TermsAndConditions/TermsAndConditions";
+import AddService from "../AddService/AddService";
+import PrivateRoute from "./PrivateRoute";
+import AddReview from "../AddReview/AddReview";
 
 export const router = createBrowserRouter([
     {
@@ -34,6 +37,14 @@ export const router = createBrowserRouter([
             {
                 path: '/terms',
                 element: <TermsAndConditions></TermsAndConditions>
+            },
+            {
+                path: '/addservice',
+                element: <PrivateRoute> <AddService></AddService></PrivateRoute>,
+            },
+            {
+                path: '/addreview',
+                element: <PrivateRoute> <AddReview></AddReview></PrivateRoute>,
             },
             {
                 path: '/login',
