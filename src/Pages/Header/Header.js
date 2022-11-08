@@ -5,7 +5,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='pt-4 pb-4'>
             <Container>
                 <Link className=' text-decoration-none fw-bolder text-light' to='/'>
                     <Image className=' me-2' style={{ width: "55px" }}

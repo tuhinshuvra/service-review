@@ -1,9 +1,7 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Container, Button, Card } from 'react-bootstrap';
 import React from 'react';
-import './Service.css';
-import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Service.css';
 
 const Service = ({ service }) => {
     const { _id, name, price, img, rating, details } = service;

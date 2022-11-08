@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <h2>This is home Page {services.length} </h2>
-            <div className=' services'>
+            <div className=' services container'>
                 {
                     services.map(service =>
                         <Service
