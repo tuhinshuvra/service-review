@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './DisplayServices.css';
 
 const DisplayServices = ({ service }) => {
@@ -14,6 +15,7 @@ const DisplayServices = ({ service }) => {
                         <Card.Text>
                             {details.slice(0, 80)}
                         </Card.Text>
+                        <Link className=' text-decoration-none fw-bolder' to={`/services/${service._id}`}>Show Details</Link>
                     </Card.Body>
 
                 </Card>
