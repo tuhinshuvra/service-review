@@ -1,9 +1,18 @@
-import React from 'react';
-import { Container, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { FaUser } from 'react-icons/fa';
+import { Button, Container, Image, Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Authentication/AuthProvider';
 import './Header.css';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch((error) => { console.log("Error : ", error); })
+    }
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='pt-4 pb-4'>
             <Container>
@@ -31,8 +40,7 @@ const Header = () => {
                         <Link className=' text-decoration-none text-light fw-bolder me-2' to="/register" >Register</Link>
                         <Link className=' text-decoration-none text-light fw-bolder me-2' to="/login">Login</Link>
 
-                        {/* <Nav className=' d-lg-none'> <LeftSideNav></LeftSideNav></Nav> */}
-                        {/* <Nav className=' text-light'>
+                        <Nav className=' text-light'>
                             {user?.uid ?
                                 <div>
                                     {user?.displayName}
@@ -57,7 +65,7 @@ const Header = () => {
                                     <Link className=' text-decoration-none text-light fw-bolder' to="/login">Login</Link>
                                 </>
                             }
-                        </Nav> */}
+                        </Nav>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

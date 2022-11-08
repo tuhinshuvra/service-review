@@ -1,7 +1,7 @@
 import React, { useContext, useReducer, useState } from 'react';
-import { GithubAuthProvider, GoogleAuthProvider, sendPasswordResetEmail } from 'firebase/auth';
+import { GoogleAuthProvider } from 'firebase/auth';
 import { ButtonGroup, Button, Form } from 'react-bootstrap';
-import { FaGoogle, FaGithub } from 'react-icons/fa';
+import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 import toast from 'react-hot-toast';
