@@ -29,6 +29,7 @@ export const router = createBrowserRouter([
                 element: <Service></Service>,
                 loader: () => fetch('https://eclectronics-doctor-review.vercel.app/services')
             },
+            // https://eclectronics-doctor-review.vercel.app/
             {
                 path: '/services/:serviceId',
                 element: <ServiceDetails></ServiceDetails>,
@@ -53,7 +54,7 @@ export const router = createBrowserRouter([
             {
                 path: '/reviewsDisplay',
                 element: <DisplayReview></DisplayReview>,
-                loader: () => fetch('http://localhost:5000/reviews')
+                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/reviews')
             },
             {
                 path: '/addreview',

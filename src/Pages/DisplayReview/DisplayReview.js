@@ -8,7 +8,7 @@ const DisplayReview = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://eclectronics-doctor-review.vercel.app/reviews')
             .then(response => response.json())
             .then(data => setReviews(data))
     }, [])
@@ -18,7 +18,7 @@ const DisplayReview = () => {
     return (
         <div className=' container'>
             <h2 className=' text-center fw-bold mt-2 mb-1'> All Review Display</h2>
-            <table class="table table-striped">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">SL</th>

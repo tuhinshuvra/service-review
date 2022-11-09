@@ -57,7 +57,7 @@ const Review = ({ _id, name, price, img, rating, details }) => {
 
     return (
         <div className=' container'>
-            <form onSubmit={handleSetReview} class="form-floating">
+            <form onSubmit={handleSetReview} className="form-floating">
                 <h2 className=' text-3xl text-center font-bold mb-4 mt-4'>Here you can add your review on {name} </h2>
                 <h4 className=' text-3xl text-center font-bold mb-4'>Service Price : ${price} </h4>
                 <div className=' d-flex flex-column'>
@@ -70,8 +70,8 @@ const Review = ({ _id, name, price, img, rating, details }) => {
                         <input name="email" type="text" placeholder="Your Email" defaultValue={user?.email} className="form-control mb-2" readOnly />
                     </div>
                 </div>
-                <div class="form-floating mt-2">
-                    <textarea name='message' class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required />
+                <div className="form-floating mt-2">
+                    <textarea name='message' className="form-control" placeholder="Leave a comment here" id="floatingTextarea" required />
                     <label htmlFor="floatingTextarea">Review Message</label>
                 </div>
 
