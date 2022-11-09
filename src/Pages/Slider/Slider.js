@@ -1,24 +1,24 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Img1 from '../../assets/images/smart-tv.png';
-import Img2 from '../../assets/images/monitor.jpg';
-import Img3 from '../../assets/images/refrigerator.jpg';
-import Img4 from '../../assets/images/laptop.jpg';
-import Img5 from '../../assets/images/washing-machine.jpg';
+import Img1 from '../../assets/images/laptop.jpg';
+import Img2 from '../../assets/images/washing-machine.jpg';
+import Img3 from '../../assets/images/smart-tv.png';
+import Img4 from '../../assets/images/monitor.jpg';
+import Img5 from '../../assets/images/refrigerator.jpg';
+import './SliderItem.css';
 
 function Slider() {
     return (
-        <div className='container'>
-            <Carousel>
+        <div className='container '>
+            <Carousel variant="dark">
                 <Carousel.Item>
                     <img
-                        className="d-block w-100"
+                        className="d-block w-100 bg-gradient"
                         src={Img1}
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -29,8 +29,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -41,10 +40,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -55,10 +51,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -69,10 +62,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
