@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Service from '../Service/Service';
 import './Home.css';
@@ -20,9 +20,13 @@ const Home = () => {
                                     <Card.Body>
                                         <Card.Title>{service.name}</Card.Title>
                                         <Card.Text>
-                                            {service.details.slice(0, 80)}
+                                            {service.details.slice(0, 100)}
                                         </Card.Text>
                                         <Link className=' text-decoration-none fw-bolder' to={`/services/${service._id}`}>Show Details</Link>
+                                        <div className=' d-flex justify-content-between'>
+                                            <Card.Text> <b> Price : </b>${service.price}</Card.Text>
+                                            <Card.Text> <b> Rating : </b>{service.rating}</Card.Text>
+                                        </div>
                                     </Card.Body>
 
                                 </Card>

@@ -11,6 +11,7 @@ import TermsAndConditions from "../TermsAndConditions/TermsAndConditions";
 import AddService from "../AddService/AddService";
 import PrivateRoute from "./PrivateRoute";
 import AddReview from "../AddReview/AddReview";
+import Review from "../Review/Review";
 
 export const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
             {
                 path: '/addservice',
                 element: <PrivateRoute> <AddService></AddService></PrivateRoute>,
+            },
+            {
+                path: '/reviews',
+                element: <PrivateRoute><Review></Review></PrivateRoute>,
             },
             {
                 path: '/addreview',

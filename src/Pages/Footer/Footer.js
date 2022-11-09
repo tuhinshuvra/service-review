@@ -14,28 +14,28 @@ const Footer = () => {
                             <h5 className='fw-bold'>Top Section</h5>
                             <ul className="nav flex-column">
                                 <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Home</Link></li>
-                                <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Courses</Link></li>
+                                <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Services</Link></li>
                                 <li className="nav-item mb-2"><Link to="/faq" className="nav-link p-0 text-muted">FAQ</Link></li>
                                 <li className="nav-item mb-2"><Link to="/blog" className="nav-link p-0 text-muted">Blog</Link></li>
                             </ul>
                         </div>
 
                         <div className="col-4 col-md-3 mb-3">
-                            <h5 className='fw-bold'>All Course</h5>
+                            <h5 className='fw-bold'>All Service</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><Link to="/courses/01" className="nav-link p-0 text-muted">JavaScript Course</Link></li>
-                                <li className="nav-item mb-2"><Link to="/courses/02" className="nav-link p-0 text-muted">ReactJS Course</Link></li>
-                                <li className="nav-item mb-2"><Link to="/courses/03" className="nav-link p-0 text-muted">MongoDB Course</Link></li>
-                                <li className="nav-item mb-2"><Link to="/courses/04" className="nav-link p-0 text-muted">Java Course</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/01" className="nav-link p-0 text-muted">JavaScript Service</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/02" className="nav-link p-0 text-muted">ReactJS Service</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/03" className="nav-link p-0 text-muted">MongoDB Service</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/04" className="nav-link p-0 text-muted">Java Service</Link></li>
                             </ul>
                         </div>
                         <div className="col-4 col-md-3 mb-3">
-                            <h5 className='fw-bold'>All Course</h5>
+                            <h5 className='fw-bold'>All Service</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><Link to="/courses/01" className="nav-link p-0 text-muted">MySQL Course</Link></li>
-                                <li className="nav-item mb-2"><Link to="/courses/02" className="nav-link p-0 text-muted">Python Course</Link></li>
-                                <li className="nav-item mb-2"><Link to="/courses/03" className="nav-link p-0 text-muted">PHP Course</Link></li>
-                                <li className="nav-item mb-2"><Link to="/courses/04" className="nav-link p-0 text-muted">Go Lan Course</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/01" className="nav-link p-0 text-muted">MySQL Service</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/02" className="nav-link p-0 text-muted">Python Service</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/03" className="nav-link p-0 text-muted">PHP Service</Link></li>
+                                <li className="nav-item mb-2"><Link to="/services/04" className="nav-link p-0 text-muted">Go Lan Service</Link></li>
                             </ul>
                         </div>
 
