@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import Hero from '../Hero/Hero';
 import Slider from '../Slider/Slider';
 import './Home.css';
 
@@ -39,6 +40,7 @@ const Home = () => {
             <div id='show-all' className=' text-center'>
                 <Link to="/services"> <button className=' btn btn-secondary'>Show All</button></Link>
             </div>
+            <Hero></Hero>
             <Slider></Slider>
         </div>
     );
