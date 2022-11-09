@@ -35,7 +35,7 @@ const Header = () => {
                                 <>
                                     {user?.displayName}
                                     <Link className=' text-decoration-none text-light fw-bolder me-2' to="/addservice" >Add Service</Link>
-                                    <Link className=' text-decoration-none text-light fw-bolder me-2' to="/reviews" >My Reviews</Link>
+                                    <Link className=' text-decoration-none text-light fw-bolder me-2' to="/myReview" >My Reviews</Link>
                                     <div>
                                         <Button onClick={handleLogOut} className=' btn btn-sm btn-danger ms-2'>Logout</Button>
                                     </div>

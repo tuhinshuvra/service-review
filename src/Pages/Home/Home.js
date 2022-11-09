@@ -15,7 +15,7 @@ const Home = () => {
             <div className='d-flex container mt-5'>
                 {
                     services.map(service =>
-                        <div className=''>
+                        <div key={service._id}>
                             <Container>
                                 <Card style={{}}>
                                     <Card.Img style={{ height: '350px' }} className='' variant="top" src={service.img} />

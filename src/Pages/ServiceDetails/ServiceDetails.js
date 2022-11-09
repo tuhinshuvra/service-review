@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import DisplayReview from '../DisplayReview/DisplayReview';
 import Review from '../Review/Review';
 import './ServiceDetails.css';
 
@@ -21,10 +22,16 @@ const ServiceDetails = () => {
                         {/* <Link className=' text-decoration-none fw-bolder' to={`/services/${_id}`}>Show Details</Link> */}
                     </Card.Body>
                 </Card>
-                <Card>
-                    <Review></Review>
-                </Card>
             </Container>
+            <Review
+                key={_id}
+                name={name}
+                img={img}
+                price={price}
+                rating={rating}
+                details={details}
+            ></Review>
+            <DisplayReview></DisplayReview>
         </div>
     );
 };
