@@ -17,12 +17,8 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='pt-4 pb-4'>
             <Container>
                 <Link className=' text-decoration-none fw-bolder text-light' to='/'>
-                    <Image className=' me-2' style={{ width: "55px" }}
-                    // src="" alt=""
-                    >
-
-                    </Image>
-                    <Link to="/" className=' text-decoration-none'> <Navbar.Brand>Electronics Doctor</Navbar.Brand></Link>
+                    {/* <Image className=' me-2' style={{ width: "55px" }} /> */}
+                    <Link to="/" className='text-decoration-none'> <Navbar.Brand>Electronics Doctor</Navbar.Brand></Link>
                 </Link>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -36,11 +32,13 @@ const Header = () => {
 
                         <Nav className=' text-light'>
                             {user?.uid ?
-                                <div>
+                                <>
                                     {user?.displayName}
                                     <Link className=' text-decoration-none text-light fw-bolder me-2' to="/addservice" >Add Service</Link>
                                     <Link className=' text-decoration-none text-light fw-bolder me-2' to="/reviews" >My Reviews</Link>
-                                    <Button onClick={handleLogOut} className=' btn btn-sm btn-danger ms-2'>Logout</Button>
+                                    <div>
+                                        <Button onClick={handleLogOut} className=' btn btn-sm btn-danger ms-2'>Logout</Button>
+                                    </div>
                                     {
                                         user?.photoURL ?
                                             <OverlayTrigger placement="left" overlay={<Tooltip id="button-tooltip-2">{user?.displayName}</Tooltip>}>
@@ -54,7 +52,7 @@ const Header = () => {
                                             <Link to="/profile"> <FaUser onMouseOver={user?.displayName} className='ms-2'></FaUser></Link>
                                     }
 
-                                </div>
+                                </>
                                 :
                                 <>
                                     <Link className=' text-decoration-none text-light fw-bolder me-2' to="/register" >Register</Link>

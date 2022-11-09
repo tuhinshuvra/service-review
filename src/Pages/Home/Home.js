@@ -24,7 +24,7 @@ const Home = () => {
                                         <Card.Text>
                                             {service.details.slice(0, 100)}
                                         </Card.Text>
-                                        <Link className=' text-decoration-none fw-bolder' to={`/services/${service._id}`}>Show Details</Link>
+                                        <Link className='text-decoration-none fw-bolder' to={`/services/${service._id}`}>Show Details</Link>
                                         <div className=' d-flex justify-content-between'>
                                             <Card.Text> <b> Price : </b>${service.price}</Card.Text>
                                             <Card.Text> <b> Rating : </b>{service.rating}</Card.Text>
