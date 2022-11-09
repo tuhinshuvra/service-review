@@ -18,7 +18,7 @@ function Slider() {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
+                        <h2 className=' fw-bold'>I Provide Better Solution of The Problem of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -29,7 +29,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
+                        <h2 className=' fw-bold'>I Provide Better Solution of The Problem of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -40,7 +40,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
+                        <h2 className=' fw-bold'>I Provide Better Solution of The Problem of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -51,7 +51,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
+                        <h2 className=' fw-bold'>I Provide Better Solution of The Problem of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -62,7 +62,7 @@ function Slider() {
                     />
 
                     <Carousel.Caption>
-                        <h2 className=' fw-bold'>I Provide Better Solution of Your Electronics as Soon as Possible</h2>
+                        <h2 className=' fw-bold'>I Provide Better Solution of The Problem of Your Electronics as Soon as Possible</h2>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

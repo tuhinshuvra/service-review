@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Hero from '../Hero/Hero';
+import Product from '../Product/Product';
 import Slider from '../Slider/Slider';
 import './Home.css';
 
@@ -10,8 +11,8 @@ const Home = () => {
     services = services.slice(0, 3)
     return (
         <div>
-            <h2>This is home Page {services.length} </h2>
-            <div className='d-flex container'>
+            <h1 className=' fw-bolder  text-center text-primary mt-3 mb-2'>Welcome to Electronics Doctor Services</h1>
+            <div className='d-flex container mt-5'>
                 {
                     services.map(service =>
                         <div className=''>
@@ -38,10 +39,13 @@ const Home = () => {
             </div>
 
             <div id='show-all' className=' text-center'>
-                <Link to="/services"> <button className=' btn btn-secondary'>Show All</button></Link>
+                <Link to="/services"> <button className=' btn btn-secondary mt-3 mb-3'>Show All</button></Link>
             </div>
-            <Hero></Hero>
-            <Slider></Slider>
+            <div>
+                <Slider></Slider>
+                <Hero></Hero>
+                <Product></Product>
+            </div>
         </div>
     );
 };
