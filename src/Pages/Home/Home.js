@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
-import Service from '../Service/Service';
+import Slider from '../Slider/Slider';
 import './Home.css';
 
 const Home = () => {
     let services = useLoaderData()
     services = services.slice(0, 3)
     return (
-        <div className=''>
+        <div>
             <h2>This is home Page {services.length} </h2>
             <div className='d-flex container'>
                 {
@@ -39,7 +39,7 @@ const Home = () => {
             <div id='show-all' className=' text-center'>
                 <Link to="/services"> <button className=' btn btn-secondary'>Show All</button></Link>
             </div>
-
+            <Slider></Slider>
         </div>
     );
 };
