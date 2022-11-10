@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
 import AllReview from './AllReview';
 import './DisplayReview.css';
 
-const DisplayReview = () => {
-    // const reviews = useLoaderData();
+const DisplayReview = ({ service_id }) => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://eclectronics-doctor-review.vercel.app/reviews')
+        fetch(`http://localhost:5000/reviews?service=${service_id}`)
             .then(response => response.json())
             .then(data => setReviews(data))
-    }, [])
+    }, [service_id])
 
 
 
     return (
         <div className=' container'>
-            <h2 className=' text-center fw-bold mt-2 mb-1'> All Review Display</h2>
+            <h2 className=' text-center fw-bold mt-2 mb-1'>Customer Review Display</h2>
             <table className="table table-striped">
                 <thead>
                     <tr>

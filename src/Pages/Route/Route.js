@@ -22,18 +22,18 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/services')
+                loader: () => fetch('http://localhost:5000/services')
             },
             {
                 path: '/services',
                 element: <Service></Service>,
-                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/services')
+                loader: () => fetch('http://localhost:5000/services')
             },
-            // https://eclectronics-doctor-review.vercel.app/
+            // http://localhost:5000/
             {
                 path: '/services/:serviceId',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`https://eclectronics-doctor-review.vercel.app/services/${params.serviceId}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.serviceId}`)
             },
             {
                 path: '/blog',
@@ -54,7 +54,7 @@ export const router = createBrowserRouter([
             {
                 path: '/reviewsDisplay',
                 element: <DisplayReview></DisplayReview>,
-                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/reviews')
+                loader: () => fetch('http://localhost:5000/reviews')
             },
             {
                 path: '/addreview',
@@ -62,7 +62,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/myReview',
-                element: <PrivateRoute> <MyReviews></MyReviews> </PrivateRoute>
+                // element: <PrivateRoute> <MyReviews></MyReviews> </PrivateRoute>
+                element: <MyReviews></MyReviews>
             },
             {
                 path: '/login',

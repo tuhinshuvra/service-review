@@ -5,13 +5,13 @@ import './MyReviews.css';
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
-    const [reviews, setReviews] = useState({})
+    const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviewonmail?email=${user?.email}`)
+        fetch(`http://localhost:5000/reviewmail?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
-    }, [])
+    }, [user?.email])
     return (
         <div className=' container'>
             <h2 className=' text-center fw-bold mt-2 mb-1'> My all Review Display</h2>

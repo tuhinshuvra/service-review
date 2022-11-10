@@ -25,13 +25,16 @@ const ServiceDetails = () => {
             </Container>
             <Review
                 key={_id}
+                service_id={_id}
                 name={name}
                 img={img}
                 price={price}
                 rating={rating}
                 details={details}
             ></Review>
-            <DisplayReview></DisplayReview>
+            <DisplayReview
+                service_id={_id}
+            ></DisplayReview>
         </div>
     );
 };

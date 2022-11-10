@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { Navigate, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 
-const Review = ({ _id, name, price, img, rating, details }) => {
+const Review = ({ service_id, name, price, img, rating, details }) => {
     const service = useLoaderData();
     const { user } = useContext(AuthContext);
     // const { _id, title, price, img, service_id, description, facility } = service;
@@ -19,7 +19,7 @@ const Review = ({ _id, name, price, img, rating, details }) => {
         const reviewPostDate = new Date();
 
         const review = {
-            service: _id,
+            service: service_id,
             serviceName: name,
             price,
             customer: customer,
@@ -28,7 +28,6 @@ const Review = ({ _id, name, price, img, rating, details }) => {
             message,
             reviewPostDate
         }
-        // fetch('https://eclectronics-doctor-review.vercel.app/reviews', {
         fetch('http://localhost:5000/reviews', {
             method: 'POST',
             headers: {
