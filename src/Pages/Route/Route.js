@@ -14,6 +14,7 @@ import AddReview from "../AddReview/AddReview";
 import Review from "../Review/Review";
 import DisplayReview from "../DisplayReview/DisplayReview";
 import MyReviews from "../MyReviews/MyReviews";
+import UpdateReview from "../MyReviews/UpdateReview";
 
 export const router = createBrowserRouter([
     {
@@ -22,17 +23,17 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/services')
             },
             {
                 path: '/services',
                 element: <Service></Service>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/services')
             },
             {
                 path: '/services/:serviceId',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.serviceId}`)
+                loader: ({ params }) => fetch(`https://eclectronics-doctor-review.vercel.app/services/${params.serviceId}`)
             },
             {
                 path: '/blog',
@@ -49,17 +50,21 @@ export const router = createBrowserRouter([
             {
                 path: '/reviews/:serviceId',
                 element: <PrivateRoute><Review></Review></PrivateRoute>,
-                // loader: ({ params }) => fetch(`/reviews/${params.serviceId}`)
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.serviceId}`)
+                loader: ({ params }) => fetch(`https://eclectronics-doctor-review.vercel.app/services/${params.serviceId}`)
             },
             {
                 path: '/reviewsDisplay',
                 element: <DisplayReview></DisplayReview>,
-                loader: () => fetch('http://localhost:5000/reviews')
+                loader: () => fetch('https://eclectronics-doctor-review.vercel.app/reviews')
             },
             {
                 path: '/addreview',
                 element: <PrivateRoute> <AddReview></AddReview></PrivateRoute>,
+            },
+            {
+                path: '/updatereview/:id',
+                element: <PrivateRoute> <UpdateReview></UpdateReview>  </PrivateRoute>,
+                loader: ({ params }) => fetch(`https://eclectronics-doctor-review.vercel.app/reviews/${params.id}`)
             },
             {
                 path: '/myReview',

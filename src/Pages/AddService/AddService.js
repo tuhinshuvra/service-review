@@ -29,7 +29,7 @@ const AddService = () => {
             details: details,
             servicePostDate,
         }
-        fetch('http://localhost:5000/services', {
+        fetch('https://eclectronics-doctor-review.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -41,7 +41,6 @@ const AddService = () => {
             .then(data => {
                 console.log("review-data", data);
                 if (data.acknowledged) {
-                    // alert('Review places successfully.')
                     toast('Service submitted successfully.')
                     form.reset();
                 }

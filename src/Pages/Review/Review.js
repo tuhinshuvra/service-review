@@ -30,7 +30,7 @@ const Review = () => {
             message,
             reviewPostDate
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://eclectronics-doctor-review.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

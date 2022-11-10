@@ -10,7 +10,7 @@ const Service = () => {
     useTitle('Service');
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://eclectronics-doctor-review.vercel.app/services')
             .then(response => response.json())
             .then(data => setServices(data))
     }, [])
