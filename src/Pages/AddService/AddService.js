@@ -4,27 +4,30 @@ import toast from 'react-hot-toast';
 import { Navigate, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 
-const AddService = ({ _id, name, price, img, rating, details }) => {
+const AddService = () => {
     const { user } = useContext(AuthContext);
     // const { _id, title, price, img, service_id, description, facility } = service;
 
     const handleSetReview = (event) => {
         event.preventDefault();
         const form = event.target;
-        const customer = `${form.firstName.value} ${form.lastName.value}`
-        const message = form.message.value;
-        const reviewPostDate = new Date();
+        // const customer = `${form.firstName.value} ${form.lastName.value}`
+        const serviceName = form.serviceName.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        // const image = form.image.value;
+        const details = form.details.value;
+        const servicePostDate = new Date();
 
         const service = {
-            service: _id,
-            serviceName: name,
-            price,
-            customer: customer,
-            message,
-            reviewPostDate
+            name: serviceName,
+            price: price,
+            // img: image,
+            rating: rating,
+            details: details,
+            servicePostDate,
         }
-        // fetch('http://localhost:5000/reviews', {
-        fetch('http://localhost:5000/serices', {
+        fetch('http://localhost:5000/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -37,7 +40,7 @@ const AddService = ({ _id, name, price, img, rating, details }) => {
                 console.log("review-data", data);
                 if (data.acknowledged) {
                     // alert('Review places successfully.')
-                    toast('Review places successfully.')
+                    toast('Service submitted successfully.')
                     form.reset();
                 }
 
@@ -58,14 +61,15 @@ const AddService = ({ _id, name, price, img, rating, details }) => {
 
                     <input name="serviceName" type="text" placeholder="Service Name" className=" form-control mb-2 " />
                     <input name="price" type="text" placeholder="Price" className="form-control mb-2" />
+                    <input name="rating" type="text" placeholder="Rating" className="form-control mb-2" />
                     {/* <div>
-                        <Image className=' mb-2' roundedCircle style={{ width: '30px' }} src='' alt='' />
+                        <Image name="image" className=' mb-2' roundedCircle style={{ width: '30px' }} src='' alt='' />
                     </div> */}
                     <input type="image" placeholder='input image' src="submit.gif" alt="Input Image" style={{ float: "right" }} width="100" height="100" />
                 </div>
                 <div className="form-floating mt-2">
-                    <textarea name='message' className="form-control" placeholder="Leave a comment here" id="floatingTextarea" required />
-                    <label htmlFor="floatingTextarea">Review Message</label>
+                    <textarea name='details' className="form-control" placeholder="Service Details" id="floatingTextarea" required />
+                    <label htmlFor="floatingTextarea">Service Details</label>
                 </div>
 
                 <div className=' mx-auto'>
