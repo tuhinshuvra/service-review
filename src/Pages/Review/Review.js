@@ -57,8 +57,8 @@ const Review = ({ service_id, name, price, img, rating, details }) => {
     return (
         <div className=' container'>
             <form onSubmit={handleSetReview} className="form-floating">
-                <h2 className=' text-3xl text-center font-bold mb-4 mt-4'>Here you can add your review on {name} </h2>
-                <h4 className=' text-3xl text-center font-bold mb-4'>Service Price : ${price} </h4>
+                <h2 className=' text-3xl text-center font-bold mb-4 mt-4'>Set Your Review </h2>
+                {/* <h4 className=' text-3xl text-center font-bold mb-4'>Service Price : ${price} </h4> */}
                 <div className=' d-flex flex-column'>
 
                     <input name="firstName" type="text" placeholder="First Name" className=" form-control mb-2 " />
