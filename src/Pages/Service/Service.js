@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './Service.css';
 import DisplayServices from '../DisplayServices/DisplayServices';
 import useTitle from '../Hooks/useTitle';
 import { AuthContext } from '../Authentication/AuthProvider';
 import { Spinner } from 'react-bootstrap';
+import './Service.css';
 
 const Service = () => {
     const { setLoading, loading } = useContext(AuthContext);

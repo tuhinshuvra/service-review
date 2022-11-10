@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div>
             <h1 className=' fw-bolder  text-center text-primary mt-3 mb-2'>Welcome to Electronics Doctor Services</h1>
-            <div className='d-flex container mt-5'>
+            <div className=' d-md-flex container mt-5'>
                 {
                     services.map(service =>
                         <div key={service._id}>
