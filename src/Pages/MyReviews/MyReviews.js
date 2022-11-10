@@ -14,7 +14,7 @@ const MyReviews = () => {
     }, [user?.email])
     return (
         <div className=' container'>
-            <h2 className=' text-center fw-bold mt-2 mb-1'> My all Review Display</h2>
+            <h2 className=' text-center fw-bold mt-2 mb-1'> Review Display</h2>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -23,6 +23,7 @@ const MyReviews = () => {
                         <th scope="col">Customer</th>
                         <th scope="col">Email</th>
                         <th scope="col">Message</th>
+                        <th scope="col">Perform</th>
                     </tr>
                 </thead>
                 <tbody>

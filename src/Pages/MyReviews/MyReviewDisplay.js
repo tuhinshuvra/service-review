@@ -12,6 +12,7 @@ const MyReviewDisplay = ({ review }) => {
             <td>{customer}</td>
             <td>{email}</td>
             <td>{message}</td>
+            <td> <span className=' fw-bold'> X </span> <span className=' ms-2 fw-bold'> Update </span> </td>
         </tr>
     );
 };

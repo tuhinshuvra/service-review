@@ -3,6 +3,7 @@ import { FaUser } from 'react-icons/fa';
 import { Button, Container, Image, Nav, Navbar, NavDropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
+import Logo from '../../assets/images/logo/online-service.png';
 import './Header.css';
 
 const Header = () => {
@@ -14,10 +15,10 @@ const Header = () => {
     }
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='pt-4 pb-4'>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='pt-2 pb-2'>
             <Container>
                 <Link className=' text-decoration-none fw-bolder text-light' to='/'>
-                    {/* <Image className=' me-2' style={{ width: "55px" }} /> */}
+                    <Image className='' style={{ width: "125px" }} src={Logo} alt="logo" />
                     <Link to="/" className='text-decoration-none'> <Navbar.Brand>Electronics Doctor</Navbar.Brand></Link>
                 </Link>
 
