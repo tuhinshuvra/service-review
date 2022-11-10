@@ -14,7 +14,7 @@ const Review = () => {
     const handleSetReview = (event) => {
         event.preventDefault();
         const form = event.target;
-        const customer = `${form.firstName.value} ${form.lastName.value}`
+        const customer = `${form.fullName.value}`
         const email = user?.email || 'Unregistered';
         const phone = form.phone.value;
         const message = form.message.value;
@@ -34,7 +34,7 @@ const Review = () => {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                // authorization: `Bearer ${localStorage.getItem('geniusToken')}`
+                authorization: `Bearer ${localStorage.getItem('reviewToken')}`
             },
             body: JSON.stringify(review)
         })
@@ -60,14 +60,12 @@ const Review = () => {
         <div className=' container'>
             <form onSubmit={handleSetReview} className="form-floating">
                 <h2 className=' text-3xl text-center font-bold mb-4 mt-4'>Set Your Review </h2>
-                {/* <h4 className=' text-3xl text-center font-bold mb-4'>Service Price : ${price} </h4> */}
                 <div className=' d-flex flex-column'>
 
-                    <input name="firstName" type="text" placeholder="First Name" className=" form-control mb-2 " />
-                    <input name="lastName" type="text" placeholder="Last Name" className="form-control mb-2" />
+                    <input name="fullName" type="text" placeholder="Full Name" className=" form-control mb-2 " />
                     <input name="phone" type="text" placeholder="Your Phone" defaultValue={user?.phone} className="form-control mb-2" required />
                     <div>
-                        {/* <Image className=' mb-2' roundedCircle style={{ width: '30px' }} src={user?.photoURL} /> */}
+                        <Image className=' mb-2' roundedCircle style={{ width: '30px' }} src={user?.photoURL} />
                         <input name="email" type="text" placeholder="Your Email" defaultValue={user?.email} className="form-control mb-2" readOnly />
                     </div>
                 </div>

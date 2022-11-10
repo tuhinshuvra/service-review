@@ -13,7 +13,11 @@ const MyReviews = () => {
     useTitle('My Reviews');
 
     useEffect(() => {
-        fetch(`https://eclectronics-doctor-review.vercel.app/reviewmail?email=${user?.email}`)
+        fetch(`https://eclectronics-doctor-review.vercel.app/reviewmail?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('reviewToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
@@ -21,9 +25,12 @@ const MyReviews = () => {
     const handleDeleteReview = (id) => {
         const proceed = window.confirm('Are you sure to delete the review ?')
         if (proceed) {
+
             fetch(`https://eclectronics-doctor-review.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
-                headers: {}
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('reviewToken')}`
+                }
             })
                 .then(res => res.json())
                 .then(data => {

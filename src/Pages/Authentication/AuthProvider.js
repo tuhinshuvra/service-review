@@ -2,7 +2,6 @@ import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 
-export const ThemeContext = createContext(null);
 export const AuthContext = createContext();
 
 const auth = getAuth(app);
@@ -28,6 +27,7 @@ const AuthProvider = ({ children }) => {
 
     const logOut = () => {
         setLoading(true);
+        localStorage.removeItem('reviewToken');
         return signOut(auth);
     }
 

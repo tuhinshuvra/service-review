@@ -7,13 +7,13 @@ const UpdateReview = () => {
     const [review, setReview] = useState(preReview);
     const { _id, serviceName, price, customer, email, phone, message } = preReview;
 
-
     const handleUpdateReview = (event) => {
         event.preventDefault();
         fetch(`https://eclectronics-doctor-review.vercel.app/reviews/${_id}`, {
             method: 'PUT',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('reviewToken')}`,
             },
             body: JSON.stringify(review)
 
