@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 import Logo from '../../assets/images/logo/online-service.png';
 import './Header.css';
+import useTitle from '../Hooks/useTitle';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
+    useTitle('Header');
     const handleLogOut = () => {
         logOut()
             .then(() => { })

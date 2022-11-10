@@ -15,7 +15,7 @@ const DisplayReview = ({ service_id }) => {
 
     return (
         <div className=' container'>
-            <h2 className=' text-center fw-bold mt-2 mb-1'>Customer Review Display</h2>
+            <h2 className=' text-center fw-bold mt-5 mb-2'>Customer Review Display</h2>
             <table className="table table-striped">
                 <thead>
                     <tr>

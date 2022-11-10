@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 import toast from 'react-hot-toast';
 import './Login.css';
+import useTitle from '../Hooks/useTitle';
 
 
 const Login = () => {
@@ -15,6 +16,7 @@ const Login = () => {
     const [userEmail, setUserEmail] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Login');
 
     const from = location.state?.from?.pathname || '/';
 

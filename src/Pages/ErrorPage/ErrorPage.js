@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../Hooks/useTitle';
 import './ErrorPage.css';
 
 const ErrorPage = () => {
+    useTitle('Wrong Route');
     return (
         <div className='error-page'>
             <h1 className=' text-danger fw-bolder'>404</h1>

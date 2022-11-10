@@ -2,14 +2,17 @@ import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import DisplayReview from '../DisplayReview/DisplayReview';
+import useTitle from '../Hooks/useTitle';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const service = useLoaderData()
+    useTitle('Service Details');
     const { _id, name, price, img, rating, details } = service;
+
     return (
         <div>
-            <h2>This is Service Details Page</h2>
+            <h2 className='fw-bold text-center mt-3 mb-3'> {name} Details</h2>
             <Container>
                 <Card style={{}} className=" p-2">
                     <Card.Img className=' img-fluid' variant="top" src={img} />

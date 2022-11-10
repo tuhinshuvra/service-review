@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import Hero from '../Hero/Hero';
+import useTitle from '../Hooks/useTitle';
 import Product from '../Product/Product';
 import Slider from '../Slider/Slider';
 import './Home.css';
 
 const Home = () => {
+    useTitle('Home');
     let services = useLoaderData()
     services = services.slice(0, 3)
     return (

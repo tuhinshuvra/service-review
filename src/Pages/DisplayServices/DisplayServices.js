@@ -1,10 +1,12 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useTitle from '../Hooks/useTitle';
 import './DisplayServices.css';
 
 const DisplayServices = ({ service }) => {
     const { _id, name, price, img, rating, details } = service;
+    useTitle('All Service');
     return (
         <div>
             <Container>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../Hooks/useTitle';
 import './TermsAndConditions.css';
 
 const TermsAndConditions = () => {
+    useTitle('Terms and Condition');
     return (
         <div className=' container'>
             <h3 className='text-center fw-bolder mt-3 mb-3'>This is Our Terms and Condition</h3>

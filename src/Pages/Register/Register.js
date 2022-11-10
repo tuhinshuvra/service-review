@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 import toast from 'react-hot-toast';
 import './Register.css';
+import useTitle from '../Hooks/useTitle';
 
 const Register = () => {
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
-
+    useTitle('Register');
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
 

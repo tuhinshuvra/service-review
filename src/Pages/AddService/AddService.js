@@ -3,9 +3,11 @@ import { Image } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { Navigate, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const AddService = () => {
     const { user } = useContext(AuthContext);
+    useTitle('Add Service');
     // const { _id, title, price, img, service_id, description, facility } = service;
 
     const handleSetReview = (event) => {

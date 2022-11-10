@@ -3,8 +3,10 @@ import { Image } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { Navigate, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const Review = () => {
+    useTitle('Review');
     const service = useLoaderData();
     const { user } = useContext(AuthContext);
     const { _id: service_id, name, price, img, rating, details } = service;

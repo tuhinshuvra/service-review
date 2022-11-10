@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Authentication/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 import MyReviewDisplay from './MyReviewDisplay';
 import './MyReviews.css';
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
+    useTitle('My Reviews');
 
     useEffect(() => {
         fetch(`http://localhost:5000/reviewmail?email=${user?.email}`)

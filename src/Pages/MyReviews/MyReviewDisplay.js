@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Authentication/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 import './MyReviewDisplay.css';
 
 const MyReviewDisplay = ({ review }) => {
     const { user } = useContext(AuthContext);
+    useTitle('My Review');
     const { serviceName, price, customer, email, phone, message } = review;
     return (
         <tr>
