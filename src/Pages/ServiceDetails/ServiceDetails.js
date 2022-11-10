@@ -11,7 +11,7 @@ const ServiceDetails = () => {
         <div>
             <h2>This is Service Details Page</h2>
             <Container>
-                <Card style={{}}>
+                <Card style={{}} className=" p-2">
                     <Card.Img className=' img-fluid' variant="top" src={img} />
                     <Card.Title> <h2> Details of {name} </h2></Card.Title>
                     <Card.Body>
@@ -20,11 +20,14 @@ const ServiceDetails = () => {
                         </Card.Text>
                         {/* <Link className=' text-decoration-none fw-bolder' to={`/services/${_id}`}>Show Details</Link> */}
                     </Card.Body>
+                    <div className=' d-flex justify-content-between '>
+
+                        <Card.Text> <b> Price:</b> {price}</Card.Text>
+                        <Card.Text> <b> Rating:</b> {rating}</Card.Text>
+                        <Link to={`/reviews/${_id}`} className="text-center"> <Button>Set Review</Button> </Link>
+                    </div>
                 </Card>
             </Container>
-            <Link to={`/reviews/${_id}`} className="text-center">
-                <Button>Set Review</Button>
-            </Link>
             <DisplayReview
                 service_id={_id}
             ></DisplayReview>

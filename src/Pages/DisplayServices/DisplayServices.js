@@ -13,7 +13,7 @@ const DisplayServices = ({ service }) => {
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                            {details.slice(0, 100)}
+                            {details.slice(0, 95)}
                         </Card.Text>
                         <Link className=' text-decoration-none fw-bolder' to={`/services/${service._id}`}>Show Details</Link>
                         <div className=' d-flex justify-content-between'>
