@@ -21,7 +21,7 @@ const Header = () => {
             <Container>
                 <Link className=' text-decoration-none fw-bolder text-light' to='/'>
                     <Image className='' style={{ width: "125px" }} src={Logo} alt="logo" />
-                    <Link to="/" className='text-decoration-none'> <Navbar.Brand>Electronics Doctor</Navbar.Brand></Link>
+                    <Link to="/" className='text-decoration-none h-auto'> <Navbar.Brand> Electronics Doctor</Navbar.Brand></Link>
                 </Link>
 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -11,7 +11,7 @@ const Hero = () => {
                         <img src={Electronics} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
                     </div>
                     <div className="col-lg-6">
-                        <h1 className="display-5 fw-bold lh-1 mb-3">Electronics Doctor Provide Service 24/7 </h1>
+                        <h3 className="display-5 fw-bold lh-1 mb-3">Electronics Doctor Provide Service 24/7 </h3>
                         <p className="lead">I provide my service every day 24/7. My people will will response your contact any time with cordially. The will get you better suggestion for the solution.</p>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                             <Link to="/services"> <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Services</button></Link>

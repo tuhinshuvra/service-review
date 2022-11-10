@@ -3,3 +3,11 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+div {
+
+    font-family: 'Poppins',
+        sans-serif;
+}
