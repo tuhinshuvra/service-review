@@ -4,7 +4,7 @@ import { AuthContext } from '../Authentication/AuthProvider';
 import useTitle from '../Hooks/useTitle';
 import './MyReviewDisplay.css';
 
-const MyReviewDisplay = ({ review, handleDeleteReview, handleUpdateReview }) => {
+const MyReviewDisplay = ({ review, handleDeleteReview }) => {
     const { user } = useContext(AuthContext);
     useTitle('My Review');
     const { _id, serviceName, price, customer, email, phone, message } = review;
