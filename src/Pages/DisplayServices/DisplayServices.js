@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
+import { PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 import useTitle from '../Hooks/useTitle';
 import './DisplayServices.css';
@@ -10,8 +11,10 @@ const DisplayServices = ({ service }) => {
     return (
         <div>
             <Container>
-                <Card style={{}}>
-                    <Card.Img style={{ height: '350px' }} className='' variant="top" src={img} />
+                <Card style={{ height: '510px' }}>
+                    <PhotoView src={img} style={{ height: '300px' }}>
+                        <Card.Img className='' variant="top" src={img} />
+                    </PhotoView>
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
@@ -26,7 +29,7 @@ const DisplayServices = ({ service }) => {
 
                 </Card>
             </Container>
-        </div>
+        </div >
     );
 };
 

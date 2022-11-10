@@ -74,7 +74,7 @@ const AddService = () => {
                 </div>
 
                 <div className=' mx-auto'>
-                    <input className='btn btn-primary btn-sm mt-2 mb-3 ' type="submit" value="Submit Your Review" />
+                    <input className='btn btn-primary btn-sm mt-2 mb-3 ' type="submit" value="Submit" />
                 </div>
             </form>
         </div>
