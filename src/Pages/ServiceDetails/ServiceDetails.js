@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import DisplayReview from '../DisplayReview/DisplayReview';
-import Review from '../Review/Review';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
@@ -26,18 +25,6 @@ const ServiceDetails = () => {
             <Link to={`/reviews/${_id}`} className="text-center">
                 <Button>Set Review</Button>
             </Link>
-
-            <div className='d-none'>
-                <Review
-                    key={_id}
-                    service_id={_id}
-                    name={name}
-                    img={img}
-                    price={price}
-                    rating={rating}
-                    details={details}
-                ></Review>
-            </div>
             <DisplayReview
                 service_id={_id}
             ></DisplayReview>

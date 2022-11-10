@@ -4,10 +4,10 @@ import toast from 'react-hot-toast';
 import { Navigate, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Authentication/AuthProvider';
 
-const Review = ({ service_id, name, price, img, rating, details }) => {
+const Review = () => {
     const service = useLoaderData();
     const { user } = useContext(AuthContext);
-    // const { _id, title, price, img, service_id, description, facility } = service;
+    const { _id: service_id, name, price, img, rating, details } = service;
 
     const handleSetReview = (event) => {
         event.preventDefault();
